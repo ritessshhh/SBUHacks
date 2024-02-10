@@ -25,7 +25,9 @@ selectButton.addEventListener("click", function () {
     }).then(data => {
 
         console.log(data);
-        window.location.assign("games/games.html");
+        window.location.assign("/game/game.html");
+        selectButton.className = "btn btn-primary";
+        selectButton.innerText = "Start Game!";
     }).catch(error => {
         console.error('Error:', error);
     });
