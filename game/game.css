@@ -1,0 +1,50 @@
+img {
+    width: 300px;
+    /* Fixed width */
+    height: 300px;
+    /* Fixed height, adjust as needed */
+    object-fit: cover;
+    /* Crop the image to fill the box, may be cropped */
+    object-position: center;
+    /* Optional: Adjust the alignment of the image within the box */
+}
+
+.btn {
+    width: 100%;
+}
+
+.cards {
+    display: flex;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    padding: 50px;
+    margin-top: 30px;
+    border-radius: 5%;
+}
+
+.policyAndCards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    margin: 50px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.game {
+    margin: 50px;
+    margin-top: 30px;
+}
+
+.policy {
+    padding: 10px 50px;
+    padding-top: 20px;
+    background-color: #3B71CA;
+    color: aliceblue;
+}
+
+.card:hover {
+    border: 2px solid #3B71CA;
+}

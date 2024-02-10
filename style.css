@@ -1,0 +1,39 @@
+.animation {
+    margin: auto;
+    margin-top: 80px;
+}
+
+.Header {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+p {
+    margin: auto;
+}
+
+.form-select {
+    width: 20%;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 8px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    padding-bottom: 13.6%;
+}
+
+
+.btn {
+    width: 200px;
+    height: 50px;
+    margin-top: 100px !important;
+}
+
+a {
+    text-decoration: none;
+}
