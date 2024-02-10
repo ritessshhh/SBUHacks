@@ -11,6 +11,8 @@ selectElement.addEventListener("change", function () {
 const selectButton = document.getElementById("selectButton");
 
 selectButton.addEventListener("click", function () {
+    selectButton.className = "btn btn-success disabled";
+    selectButton.innerText = "Loading...";
     fetch('http://127.0.0.1:8000/start', {
         method: 'POST',
         body: selectedText,
@@ -21,8 +23,9 @@ selectButton.addEventListener("click", function () {
             throw new Error('Network response was not ok.');
         }
     }).then(data => {
-        console.log(data); // Log the response data
-        // Here you can handle the response data as needed
+
+        console.log(data);
+        window.location.assign("games/games.html");
     }).catch(error => {
         console.error('Error:', error);
     });
