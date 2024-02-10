@@ -7,15 +7,20 @@ let correctAns = undefined;
 console.log(questionInfo); // Output: testValue
 
 let candidates = {
-    "Joe Biden": { party: "D", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Joe_Biden_presidential_portrait.jpg/1200px-Joe_Biden_presidential_portrait.jpg", description: "Joe Biden is here" },
-    "Donald Trump": { party: "R", image: "https://upload.wikimedia.org/wikipedia/commons/5/56/Donald_Trump_official_portrait.jpg", description: "Donald Trump is here" },
-    "Nikki Haley": { party: "D", image: "https://cdn.britannica.com/02/193902-050-698C7C2B/Nikki-Haley.jpg", description: "Nicky Hailey is here" },
-    "Dean Phillips": { party: "R", image: "https://mn.gov/mdva/assets/2023-03-15-rep-phillips-official_tcm1066-569607.png", description: "Dean Phillips was here" }
+    "Joe Biden": { party: "democrat", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Joe_Biden_presidential_portrait.jpg/1200px-Joe_Biden_presidential_portrait.jpg", description: "Joe Biden is here" },
+    "Donald Trump": { party: "republican", image: "https://upload.wikimedia.org/wikipedia/commons/5/56/Donald_Trump_official_portrait.jpg", description: "Donald Trump is here" },
+    "Nikki Haley": { party: "republican", image: "https://cdn.britannica.com/02/193902-050-698C7C2B/Nikki-Haley.jpg", description: "Nicky Hailey is here" },
+    "Dean Phillips": { party: "democrat", image: "https://mn.gov/mdva/assets/2023-03-15-rep-phillips-official_tcm1066-569607.png", description: "Dean Phillips was here" }
 }
+
+const progressBar = document.getElementById("progress");
+const progressBarMaxWidth = 340;
+const scoreIncrement = 30;
+let score = 0;
 
 const policyText = document.getElementById("policyText");
 
-let score = 0;
+
 
 let card1 = document.getElementById("card1")
 card1 = { self: card1, image: card1.querySelector("img"), title: card1.querySelector("div > h5"), description: card1.querySelector("div > p"), button: card1.querySelector("button") }
@@ -38,7 +43,8 @@ function answerQuestion(option) {
     card2.button.disabled = true;
 
     if (option == correctAns) {
-        score += 100
+        score += 30;
+        progressBar.style.width = `${score}px`
         console.log("Correct!");
         newElement.setAttribute('src', 'https://lottie.host/16cf6411-69cf-487e-84b9-56e7546e423a/83x9J6NMxd.json');
         correctCard.self.appendChild(newElement)
@@ -63,6 +69,8 @@ function answerQuestion(option) {
 function chooseQuestion() {
     card1.button.disabled = false;
     card2.button.disabled = false;
+    card1.self.classList.remove("democrat", "republican")
+    card2.self.classList.remove("democrat", "republican")
 
     policyText.innerText = questionInfo.question
 
@@ -71,10 +79,12 @@ function chooseQuestion() {
     correctCard = cards[correctAns];
     correctCard.image.src = candidates[questionInfo["correct_candidate"]].image
     correctCard.title.innerText = questionInfo["correct_candidate"]
+    correctCard.self.classList.add(candidates[questionInfo["correct_candidate"]].party)
 
     incorrectCard = cards[1 - correctAns]
     incorrectCard.image.src = candidates[questionInfo["incorrect_candidate"]].image
     incorrectCard.title.innerText = questionInfo["incorrect_candidate"]
+    incorrectCard.self.classList.add(candidates[questionInfo["incorrect_candidate"]].party)
 }
 
 function vote(candidate) {
