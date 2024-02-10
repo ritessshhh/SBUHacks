@@ -12,7 +12,7 @@
 
 <body>
     <div class="game">
-        <h2>Score: <span class="Points">0</span></h2>
+        <h2>Score: <span id="points" class="Points">0</span></h2>
     </div>
     <div class="policyAndCards">
         <div class="policy">
@@ -26,7 +26,7 @@
                     <h5 class="card-title">Donald Trump</h5>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                         card's content.</p>
-                    <a href="#" class="btn btn-primary">Vote!</a>
+                    <a href="#" class="btn btn-primary" onclick="answerQuestion(0)">Vote!</a>
                 </div>
             </div>
             <div id="card2" class="card text-center" style="width: 18rem;">
@@ -36,7 +36,7 @@
                     <h5 class="card-title">Joe Biden</h5>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                         card's content.</p>
-                    <a href="#" class="btn btn-primary">Vote!</a>
+                    <a href="#" class="btn btn-primary" onclick="answerQuestion(1)">Vote!</a>
                 </div>
             </div>
         </div>
