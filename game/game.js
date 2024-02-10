@@ -3,8 +3,6 @@ let questionInfo = JSON.parse(sessionStorage.getItem('questionInfo'));
 let correctAns = undefined;
 console.log(questionInfo); // Output: testValue
 
-
-
 let candidates = {
     "Joe Biden": { image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Joe_Biden_presidential_portrait.jpg/1200px-Joe_Biden_presidential_portrait.jpg", description: "Joe Biden is here" },
     "Donald Trump": { image: "https://upload.wikimedia.org/wikipedia/commons/5/56/Donald_Trump_official_portrait.jpg", description: "Donald Trump is here" },

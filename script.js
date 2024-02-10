@@ -25,6 +25,7 @@ selectButton.addEventListener("click", function () {
     }).then(data => {
         // Set a value in sessionStorage
         console.log(data);
+
         sessionStorage.setItem('questionInfo', JSON.stringify(data));
         window.location.assign("/game/game.html");
         selectButton.className = "btn btn-primary";
