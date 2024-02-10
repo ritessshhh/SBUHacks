@@ -44,6 +44,10 @@ a {
     grid-template-columns: repeat(3, 100%);
     overflow: hidden;
     scroll-behavior: smooth;
+    margin-top: 500px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 200px;
 }
 
 .wrapper section {
@@ -109,4 +113,9 @@ h4 {
 
 .item img {
     border-radius: 10px 10px 0 0;
+}
+
+dotlottie-player {
+    margin-bottom: -50px;
+    margin-top: 50px;
 }

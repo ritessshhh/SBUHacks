@@ -1,14 +1,11 @@
 // Retrieve the value from sessionStorage
 let questionInfo = JSON.parse(sessionStorage.getItem('questionInfo'));
-
-questionInfo = {'correct_candidate': 'Joe Biden', 'incorrect_candidate': 'Nikki Haley', 'policy_area': 'Climate', 'question': 'How can we innovate and implement policies to ensure a swift and sustainable transition to renewable energy sources, whilst maintaining economic stability and creating job opportunities in the face of climate change?'}
-
 let correctAns = undefined;
 console.log(questionInfo); // Output: testValue
 
 let candidates = {
-    "Joe Biden": { party: "democrat", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Joe_Biden_presidential_portrait.jpg/1200px-Joe_Biden_presidential_portrait.jpg", description: "Joe Biden is here" },
-    "Donald Trump": { party: "republican", image: "https://upload.wikimedia.org/wikipedia/commons/5/56/Donald_Trump_official_portrait.jpg", description: "Donald Trump is here" },
+    "Joe Biden": { party: "democrat", image: "../images/Biden.png", description: "Joe Biden is here" },
+    "Donald Trump": { party: "republican", image: "../images/trump.png", description: "Donald Trump is here" },
     "Nikki Haley": { party: "republican", image: "https://cdn.britannica.com/02/193902-050-698C7C2B/Nikki-Haley.jpg", description: "Nicky Hailey is here" },
     "Dean Phillips": { party: "democrat", image: "https://mn.gov/mdva/assets/2023-03-15-rep-phillips-official_tcm1066-569607.png", description: "Dean Phillips was here" }
 }
