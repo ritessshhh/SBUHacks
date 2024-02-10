@@ -107,3 +107,7 @@ function chooseQuestion() {
 function vote(candidate) {
     console.log(candidate);
 }
+
+function goBack() {
+    window.location.assign("../index.html");
+}

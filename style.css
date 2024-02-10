@@ -1,3 +1,11 @@
+body {
+    background-image: url(../images/question.svg);
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+}
+
 .animation {
     margin: auto;
     margin-top: 80px;
@@ -109,6 +117,7 @@ h4 {
 .item {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-radius: 10px;
+    transition: all 0.5s;
 }
 
 .item img {
@@ -118,4 +127,8 @@ h4 {
 dotlottie-player {
     margin-bottom: -50px;
     margin-top: 50px;
+}
+
+.item:hover {
+    border: 5px solid #ffdd00;
 }

@@ -49,6 +49,7 @@ img {
     padding-top: 4px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     background-color: white;
+    margin-bottom: 10px;
 }
 
 .policy {
@@ -96,4 +97,25 @@ dotlottie-player {
 .democrat {
     background-color: #E5EBFF;
     box-shadow: 0 0 0 2px #0275d8, 12px 12px 0 0 #0275d8;
+}
+
+.backButton {
+    display: flex;
+    margin-left: 55px;
+    width: 120px;
+    border-radius: 25px;
+    padding: 5px;
+    background-color: #0275d8;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
+}
+
+.backButton:hover {
+    background-color: #014e92;
+    cursor: pointer;
+}
+
+.backButton h4 {
+    margin-top: 4px;
 }
