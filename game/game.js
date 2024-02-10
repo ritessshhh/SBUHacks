@@ -43,7 +43,7 @@ function answerQuestion(option) {
         score += 30;
         progressBar.style.width = `${score}px`
         console.log("Correct!");
-        newElement.setAttribute('src', 'https://lottie.host/16cf6411-69cf-487e-84b9-56e7546e423a/83x9J6NMxd.json');
+        newElement.setAttribute('src', 'https://lottie.host/21d6933f-3fcc-48e4-9d95-7b66f5ec8e93/Xl94Qp2IpM.json');
         correctCard.self.appendChild(newElement)
         newElement.setAttribute('speed', '0.9');
 
@@ -53,7 +53,7 @@ function answerQuestion(option) {
     }
     else {
         console.log("Incorrect!");
-        newElement.setAttribute('src', 'https://lottie.host/21d6933f-3fcc-48e4-9d95-7b66f5ec8e93/Xl94Qp2IpM.json');
+        newElement.setAttribute('src', 'https://lottie.host/16cf6411-69cf-487e-84b9-56e7546e423a/83x9J6NMxd.json');
         incorrectCard.self.appendChild(newElement)
         newElement.setAttribute('speed', '0.8');
 
