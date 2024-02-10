@@ -23,8 +23,9 @@ selectButton.addEventListener("click", function () {
             throw new Error('Network response was not ok.');
         }
     }).then(data => {
-
+// Set a value in sessionStorage
         console.log(data);
+        sessionStorage.setItem('questionInfo', JSON.stringify(data));
         window.location.assign("/game/game.html");
         selectButton.className = "btn btn-primary";
         selectButton.innerText = "Start Game!";

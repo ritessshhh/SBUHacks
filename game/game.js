@@ -1,3 +1,7 @@
+// Retrieve the value from sessionStorage
+var value = JSON.parse(sessionStorage.getItem('questionInfo'));
+console.log(value); // Output: testValue
+
 let candidates = [
     { name: "Joe Biden", image: "../images/biden.jpg", description: "Joe Biden is here" },
     { name: "Donald Trump", image: "../images/trump.jpg", description: "Donald Trump is here"},
