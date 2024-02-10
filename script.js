@@ -47,6 +47,7 @@ document.addEventListener('DOMContentLoaded', function () {
         item.addEventListener('click', function () {
             // Get the text content of the h4 element inside the clicked item
             const text = this.querySelector('h4').textContent;
+
             fetch('http://127.0.0.1:8000/start', {
                 method: 'POST',
                 body: text,
