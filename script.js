@@ -60,7 +60,8 @@ document.addEventListener('DOMContentLoaded', function () {
             }).then(data => {
                 // Set a value in sessionStorage
                 console.log(data);
-
+                
+                sessionStorage.setItem('topic', text)
                 sessionStorage.setItem('questionInfo', JSON.stringify(data));
                 window.location.assign("/game/game.html");
             }).catch(error => {

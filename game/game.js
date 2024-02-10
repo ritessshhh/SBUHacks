@@ -1,4 +1,5 @@
 // Retrieve the value from sessionStorage
+const topic = sessionStorage.getItem('topic');
 let questionInfo = JSON.parse(sessionStorage.getItem('questionInfo'));
 let correctAns = undefined;
 console.log(questionInfo); // Output: testValue
@@ -61,6 +62,25 @@ function answerQuestion(option) {
             incorrectCard.self.removeChild(newElement);
         }, 2000);
     }
+
+    fetch('http://127.0.0.1:8000/start', {
+        method: 'POST',
+        body: topic,
+    }).then(response => {
+        if (response.ok) {
+            return response.json(); // Parse response body as JSON
+        } else {
+            throw new Error('Network response was not ok.');
+        }
+    }).then(data => {
+        // Set a value in sessionStorage
+        console.log(data);
+        questionInfo = data;
+
+        setTimeout(chooseQuestion, 3000);
+    }).catch(error => {
+        console.error('Error:', error);
+    });
 }
 
 function chooseQuestion() {
