@@ -41,8 +41,7 @@ img {
 .policy {
     padding: 10px 50px;
     padding-top: 20px;
-    background-color: #3B71CA;
-    color: aliceblue;
+    border-radius: 20px;
 }
 
 .card:hover {
