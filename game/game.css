@@ -3,6 +3,8 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
 }
 
 img {
@@ -35,7 +37,6 @@ img {
 
 .card {
     margin: 50px;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .game {
@@ -78,6 +79,8 @@ dotlottie-player {
 
 #card1 {
     background-color: #FFE5E5;
+    box-shadow: 0 0 0 2px rgba(218, 102, 123, 1), 12px 12px 0 0 rgba(218, 102, 123, 1);
+
 }
 
 #card1 a {
@@ -86,4 +89,6 @@ dotlottie-player {
 
 #card2 {
     background-color: #E5EBFF;
+    box-shadow: 0 0 0 2px #0275d8, 20px 20px 0 0 #0275d8;
+
 }
