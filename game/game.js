@@ -6,8 +6,8 @@ console.log(questionInfo); // Output: testValue
 let candidates = {
     "Joe Biden": { image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Joe_Biden_presidential_portrait.jpg/1200px-Joe_Biden_presidential_portrait.jpg", description: "Joe Biden is here" },
     "Donald Trump": { image: "https://upload.wikimedia.org/wikipedia/commons/5/56/Donald_Trump_official_portrait.jpg", description: "Donald Trump is here" },
-    "Nikki Haley": { image: "https://cdn.britannica.com/02/193902-050-698C7C2B/Nikki-Haley.jpg", description: "Nicky Hailey is here", 
-    "Dean Phillips": { image: "https://mn.gov/mdva/assets/2023-03-15-rep-phillips-official_tcm1066-569607.png", description: "Dean Phillips was here" }}
+    "Nikki Haley": { image: "https://cdn.britannica.com/02/193902-050-698C7C2B/Nikki-Haley.jpg", description: "Nicky Hailey is here" },
+    "Dean Phillips": { image: "https://mn.gov/mdva/assets/2023-03-15-rep-phillips-official_tcm1066-569607.png", description: "Dean Phillips was here" }
 }
 
 const policyText = document.getElementById("policyText");
@@ -39,15 +39,15 @@ function answerQuestion(option) {
 
 function chooseQuestion() {
     policyText.innerText = questionInfo.question
-    
+
     correctAns = Math.floor(Math.random() * 2)
-    
+
     let incorrectCard = cards[1 - correctAns]
     correctCard = cards[correctAns];
 
     correctCard.image.src = candidates[questionInfo["correct_candidate"]].image
     correctCard.title.innerText = questionInfo["correct_candidate"]
-    
+
     incorrectCard.image.src = candidates[questionInfo["incorrect_candidate"]].image
     incorrectCard.title.innerText = questionInfo["incorrect_candidate"]
 }
