@@ -1,3 +1,10 @@
+body {
+    background-image: url(../images/question.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 img {
     width: 300px;
     /* Fixed width */
@@ -15,10 +22,8 @@ img {
 
 .cards {
     display: flex;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-    padding: 50px;
-    margin-top: 30px;
     border-radius: 5%;
+    margin-bottom: 20px;
 }
 
 .policyAndCards {
@@ -37,6 +42,12 @@ img {
     margin: 50px;
     margin-top: 30px;
     display: flex;
+    width: 500px;
+    border-radius: 30px;
+    padding-left: 20px;
+    padding-top: 4px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    background-color: white;
 }
 
 .policy {
@@ -52,11 +63,27 @@ img {
 }
 
 .progress {
-    width: 200px;
-    margin-top: 12px;
+    width: 340px;
+    margin-top: 13px;
     margin-left: 15px;
 }
 
 dotlottie-player {
     position: absolute;
+}
+
+.cards img {
+    padding: 15px;
+}
+
+#card1 {
+    background-color: #FFE5E5;
+}
+
+#card1 a {
+    background-color: #FF5D5D;
+}
+
+#card2 {
+    background-color: #E5EBFF;
 }
