@@ -5,7 +5,8 @@ body {
     background-repeat: no-repeat;
     width: 100vw;
     height: 100vh;
-    color: white;
+    color: black;
+
 }
 
 .animation {
@@ -134,5 +135,7 @@ dotlottie-player {
 }
 
 .btn {
-    margin-bottom: 100px;
+    margin-bottom: 500px;
+    background-color: black;
+    color: white;
 }
