@@ -5,7 +5,7 @@ body {
     background-repeat: no-repeat;
     width: 100vw;
     height: 100vh;
-    color: #1D2764;
+    color: white;
 }
 
 .animation {
@@ -15,7 +15,8 @@ body {
 
 .Header {
     text-align: center;
-    margin-bottom: 10px;
+    margin-top: 250px !important;
+    margin-bottom: -50px;
 }
 
 .form-select {
@@ -132,11 +133,6 @@ dotlottie-player {
     cursor: pointer;
 }
 
-.btn.btn-dark {
-    background-color: #1D2764;
-}
-
 .btn {
-    margin-top: 400px !important;
-    margin-bottom: 30px !important;
+    margin-bottom: 100px;
 }

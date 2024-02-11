@@ -11,7 +11,7 @@ let candidates = {
     "Joe Biden": { party: "democrat", image: "../images/Biden.png", description: "Joe Biden is here" },
     "Donald Trump": { party: "republican", image: "../images/trump.png", description: "Donald Trump is here" },
     "Nikki Haley": { party: "republican", image: "https://cdn.britannica.com/02/193902-050-698C7C2B/Nikki-Haley.jpg", description: "Nicky Hailey is here" },
-    "Dean Phillips": { party: "democrat", image: "https://mn.gov/mdva/assets/2023-03-15-rep-phillips-official_tcm1066-569607.png", description: "Dean Phillips was here" }
+    "Dean Phillips": { party: "democrat", image: "../images/philips.png", description: "Dean Phillips was here" }
 }
 
 const progressBar = document.getElementById("progress");
