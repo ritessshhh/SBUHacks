@@ -1,4 +1,4 @@
-#Empowering Youth Through Advanced Interactive Voting Education
+# Empowering Youth Through Advanced Interactive Voting Education
 
 ## Inspiration
 
