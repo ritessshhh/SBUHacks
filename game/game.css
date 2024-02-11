@@ -16,13 +16,18 @@ body {
     z-index: 2;
     background-color: rgb(255, 255, 255);
     border: 1px solid blue;
-    padding: 20px;
     border-radius: 30px;
     display: none;
+    padding: 40px 10px;
 }
 
-#form > * {
-    padding: 5px;
+#form .row > * {
+    margin: 2px;
+    width: 90%;
+}
+
+#form label {
+    margin-top: 5px;
 }
 
 img {
