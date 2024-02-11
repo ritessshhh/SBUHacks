@@ -17,7 +17,9 @@ let candidates = {
 const progressBar = document.getElementById("progress");
 const progressBarMaxWidth = 340;
 const scoreIncrement = 30;
+
 let score = 0;
+progressBar.style.width = `${score}px`
 
 const policyText = document.getElementById("policyText");
 
