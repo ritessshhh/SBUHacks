@@ -72,7 +72,7 @@ function answerQuestion(option) {
     if (score >= progressBarMaxWidth) {
         sessionStorage.setItem('success', topic);
         setTimeout(() => {
-            window.location.assign("/index.html");
+            window.location.assign("/FrontEnd/feedback.html");
         }, 5000);
     }
     else {
