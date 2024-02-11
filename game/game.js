@@ -72,8 +72,8 @@ function answerQuestion(option) {
     if (score >= progressBarMaxWidth) {
         sessionStorage.setItem('success', topic);
         setTimeout(() => {
-            window.location.assign("/FrontEnd/feedback.html");
-        }, 5000);
+            document.getElementById("form").style.display = "block";
+        }, 4000);
     }
     else {
         fetch('http://127.0.0.1:8000/start', {
@@ -91,7 +91,7 @@ function answerQuestion(option) {
             console.log(data);
             questionInfo = data;
 
-            setTimeout(chooseQuestion, 3000);
+            setTimeout(chooseQuestion, 2500);
         }).catch(error => {
             document.getElementById('loadingOverlay').style.display = 'none';
             console.error('Error:', error);
@@ -184,3 +184,44 @@ setTimeout(() => {
     receiveMessageLeft("How can I help you today?");
 }, 3000);
 
+
+// form loagic
+document.addEventListener('DOMContentLoaded', function () {
+    const feedbackForm = document.getElementById('form');
+    feedbackForm.addEventListener('submit', function(e) {
+      e.preventDefault(); // Prevent default form submission
+  
+      const formData = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        feedback: document.getElementById('feedback').value,
+      };
+  
+      console.log(formData);
+      
+      // Show loading overlay
+      document.getElementById('loadingOverlay').style.display = 'block';
+  
+      // Submit the form data to your server endpoint
+      fetch('/submit-feedback', { // Make sure this endpoint matches your server setup
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+      .then(response => response.json())
+      .then(data => {
+        console.log('Success:', data);
+        // Hide loading overlay
+        document.getElementById('loadingOverlay').style.display = 'none';
+        // Handle success (e.g., show a success message, redirect, etc.)
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+        document.getElementById('loadingOverlay').style.display = 'none';
+        // Handle error (e.g., show an error message)
+      });
+    });
+  });
+  
