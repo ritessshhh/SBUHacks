@@ -116,24 +116,6 @@ dotlottie-player {
     margin-top: 4px;
 }
 
-.btn-group {
-    padding-right: 89%;
-    margin-top: -50px;
-
-}
-
-.btn-group button {
-    padding-top: 3px;
-    padding-bottom: 3px;
-    color: white;
-    background-color: #0275d8;
-    border-radius: 30px;
-}
-
-.btn-group button svg {
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
 
 .dropdown-item {
     max-width: 400px;
@@ -141,24 +123,40 @@ dotlottie-player {
     word-wrap: break-word;
 }
 
-.btn-group2 {
+
+.btn-group.dropup.one {
     padding-left: 89%;
     margin-top: -50px;
 
 }
 
-.btn-group2 button {
-    padding-top: 3px;
-    padding-bottom: 3px;
+#dropdown2 {
+    padding-right: 89%;
+    margin-top: -50px;
+}
+
+.btn-group.dropup.one button {
     color: white;
     background-color: #0275d8;
     border-radius: 30px;
 }
 
-.btn-group2 button svg {
+#dropdown2 button {
+    color: white;
+    background-color: #0275d8;
+    border-radius: 30px;
+}
+
+
+.btn-group.dropup.one button svg {
     margin-top: 5px;
     margin-bottom: 5px;
 }
+
+#dropdown2 span {
+    font-size: 22px;
+}
+
 
 .chat-container {
     display: flex;
