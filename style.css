@@ -1,4 +1,4 @@
-body {
+/* body {
     background-image: url("../images/Homepage (3).png");
     background-size: cover;
     background-repeat: no-repeat;
@@ -6,6 +6,22 @@ body {
     height: 100vh;
     color: black;
 
+} */
+
+#video {
+    width: 100vw;
+    height: 230vh;
+    object-fit: cover;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 20px;
+    bottom: 0;
+    z-index:-100;
+}
+
+#learning-btn {
+    margin-top: 650px;
 }
 
 .animation {

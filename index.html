@@ -13,6 +13,17 @@
 </head>
 
 <body>
+    <video id="video" ontimeupdate="pauseVideo(this)" src="../images/intro.mp4" muted loop autoplay>
+    </video>
+    <script>
+        const video = document.getElementById('video');
+    
+        function pauseVideo(event) {
+            if (event.currentTime > video.duration - 0.5) {
+                video.pause();
+            }
+        }
+    </script>
     <div class="main">
         <div id="masteryText" class="alert alert-success" role="alert">
             hello
@@ -25,7 +36,7 @@
                     autoplay></dotlottie-player>
             </div>
         </div>
-        <a href="#wrapper"><button class="btn btn-light">Start Learning!</button></a>
+        <a id="learning-btn" href="#wrapper"><button class="btn btn-light">Start Learning!</button></a>
         <b>
             <h6 class="Header mt-3">This educational game offers an
                 engaging
