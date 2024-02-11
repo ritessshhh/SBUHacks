@@ -3,9 +3,13 @@ const bodyParser = require('body-parser');
 const { MongoClient } = require('mongodb');
 const natural = require('natural');
 const path = require('path');
+const cors = require('cors');
+
+// Use this to allow specific origins or use cors() to allow all origins
+
 
 const app = express();
-const port = 3000;
+const port = 3002;
 
 // MongoDB connection URI and Database Name
 const uri = "mongodb+srv://amirhamza:Nabil.2001@cluster0.vomraa2.mongodb.net/?retryWrites=true&w=majority";
@@ -15,8 +19,8 @@ const client = new MongoClient(uri)
 // Use body-parser to parse JSON body
 app.use(bodyParser.json());
 
-// Static files middleware (if you're serving static content like HTML/CSS/JS)
-app.use(express.static(path.join(__dirname, 'public')));
+// Serve static files from the 'game' directory
+app.use(express.static(path.join(__dirname, 'game')));
 
 // Connect to MongoDB
 async function connectToMongo() {
@@ -59,13 +63,21 @@ app.post('/submit-feedback', async (req, res) => {
     }
 });
 
+app.use(express.static(__dirname)); // Serves files from the project root
+
+
+app.use(express.static(path.join(__dirname, 'game')));
+
+app.use(cors());
+
+
+app.get('/', (req, res) => {
+    res.sendFile('/Users/ritessshhh/Desktop/PROJECTS/SBUHacks2/SBUHacks/index.html');
+});
+
 // Start the server
 app.listen(port, () => {
     console.log(`Server listening at http://localhost:${port}`);
-});
-
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'FrontEnd', 'feedback.html'));
 });
 
 
