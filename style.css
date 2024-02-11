@@ -21,11 +21,11 @@
 }
 
 #learning-btn {
-    margin-top: 650px;
+    margin-top: 10px;
 }
 
 .animation {
-    margin: auto;
+    margin: 10px;
     margin-top: 80px;
 }
 
@@ -45,17 +45,16 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 8px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-    padding-bottom: 13.6%;
+    padding-bottom: 100px;
+    
 }
 
 
 .btn {
     width: 200px;
     height: 50px;
-    margin-top: 100px !important;
-    transition: all 1s;
+    margin-top: 650px !important;
+    transition: all .5s;
 }
 
 a {
@@ -67,7 +66,7 @@ a {
     grid-template-columns: repeat(3, 100%);
     overflow: hidden;
     scroll-behavior: smooth;
-    margin-top: 700px;
+    margin-top: 210px;
     display: flex;
     flex-direction: column;
     margin-bottom: 200px;
@@ -79,7 +78,7 @@ a {
     position: relative;
     display: grid;
     grid-template-columns: repeat(5, auto);
-    margin: 20px 0;
+    margin: 40px 0;
 }
 
 .wrapper section .item {
@@ -89,13 +88,13 @@ a {
 }
 
 .wrapper section .item:hover {
-    margin: 0 40px;
+    margin: 0 80px;
     transform: scale(1.2);
 }
 
 .wrapper section a {
     position: absolute;
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
     font-size: 6em;
     background: rgb(0, 0, 0);
@@ -125,15 +124,23 @@ a {
     }
 }
 
+#policy {
+    padding-top: 50px;
+    color: #1b2563;
+}
+
 h4 {
     text-align: center;
     padding: 5px;
 }
 
 .item {
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    border-radius: 10px;
-    transition: all 0.5s;
+    color:#1b2563;
+    background-color: #ffffff;
+    border-radius: 15px;
+    transition: all 1s;
+    margin-right: 10px;
+    padding-bottom: 10px;
 }
 
 .item img {
@@ -146,13 +153,20 @@ dotlottie-player {
 }
 
 .item:hover {
-    border: 5px solid #ffdd00;
+    border: 3px solid #1b2563;
     cursor: pointer;
+    background-color:#e5ebff;
 }
 
 .btn {
-    margin-bottom: 500px;
-    background-color: black;
+    margin-bottom: 0px;
+    background-color: white;
+    
+}
+
+.btn:hover {
+    margin-bottom: 0px;
+    background-color: #1b2563;
     color: white;
 }
 
