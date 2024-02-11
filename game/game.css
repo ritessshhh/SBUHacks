@@ -140,3 +140,50 @@ dotlottie-player {
     white-space: normal;
     word-wrap: break-word;
 }
+
+.btn-group2 {
+    padding-left: 89%;
+    margin-top: -50px;
+
+}
+
+.btn-group2 button {
+    padding-top: 3px;
+    padding-bottom: 3px;
+    color: white;
+    background-color: #0275d8;
+    border-radius: 30px;
+}
+
+.btn-group2 button svg {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 20px;
+    height: 500px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.message {
+    background-color: #f1f1f1;
+    padding: 5px 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    max-width: 210px;
+    word-wrap: break-word;
+}
+
+.input-container {
+    margin: 20px;
+}
+
+#sendButton {
+    border-radius: 2px;
+}

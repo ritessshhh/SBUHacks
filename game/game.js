@@ -130,3 +130,57 @@ function vote(candidate) {
 function goBack() {
     window.location.assign("../index.html");
 }
+
+function appendMessage(message, side) {
+    const chatContainer = document.getElementById('chatContainer');
+    const messageElement = document.createElement('div');
+    messageElement.classList.add('message');
+    messageElement.textContent = message;
+    // Apply different styling or classes based on the message side
+    if (side === "left") {
+        messageElement.style.alignSelf = 'flex-start';
+        messageElement.style.backgroundColor = '#FFE5E5';
+    } else {
+        messageElement.style.alignSelf = 'flex-end';
+        messageElement.style.backgroundColor = '#E5EBFF';
+    }
+    chatContainer.appendChild(messageElement);
+    chatContainer.scrollTop = chatContainer.scrollHeight; // Scroll to bottom
+}
+
+function sendMessage() {
+    const input = document.getElementById('messageInput');
+    const message = input.value.trim();
+    if (message) {
+        appendMessage(message, "right"); // Display user message on the right
+        input.value = ''; // Clear input field
+    }
+    fetch('http://127.0.0.1:8000/chatbot', {
+        method: 'POST',
+        body: message,
+    }).then(response => {
+        if (response.ok) {
+            return response.json(); // Parse response body as JSON
+        } else {
+            throw new Error('Network response was not ok.');
+        }
+    }).then(data => {
+        // Set a value in sessionStorage
+        appendMessage(data['answer'], "left");
+
+        setTimeout(chooseQuestion, 3000);
+    }).catch(error => {
+        console.error('Error:', error);
+    });
+}
+
+// Simulate receiving a message from another participant or chatbot
+function receiveMessageLeft(message) {
+    appendMessage(message, "left"); // This will display the message on the left
+}
+
+// Example usage of receiveMessageLeft (you can replace this with your actual logic for receiving messages)
+setTimeout(() => {
+    receiveMessageLeft("How can I help you today?");
+}, 3000);
+
