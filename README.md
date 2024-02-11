@@ -1,3 +1,5 @@
+#Empowering Youth Through Advanced Interactive Voting Education
+
 ## Inspiration
 
 The transition from a high school student passionate about politics to a college freshman preoccupied with academics highlighted a significant issue for me: the lack of accessible, engaging political education for young people. Traditional methods, such as lengthy articles, often failed to effectively convey the nuances of candidates' policies, leading to a disconnection from political engagement.
