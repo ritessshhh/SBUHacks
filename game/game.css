@@ -115,3 +115,20 @@ dotlottie-player {
 .backButton h4 {
     margin-top: 4px;
 }
+
+.btn-group {
+    padding-right: 90%;
+
+}
+
+.btn-group button {
+    padding-top: 3px;
+    padding-bottom: 3px;
+    color: white;
+    background-color: #0275d8;
+}
+
+.btn-group button svg {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
