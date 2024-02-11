@@ -4,6 +4,19 @@
 
 The transition from a high school student passionate about politics to a college freshman preoccupied with academics highlighted a significant issue for me: the lack of accessible, engaging political education for young people. Traditional methods, such as lengthy articles, often failed to effectively convey the nuances of candidates' policies, leading to a disconnection from political engagement.
 
+## How to install and run?
+```bash
+git clone https://github.com/ritessshhh/SBUHacks
+cd Server
+pip install -r requirements.txt
+cd ../Client
+npm install express mongodb body-parser
+node server.js
+```
+<img width="1512" alt="Screenshot 2024-02-11 at 7 34 46 AM" src="https://github.com/ritessshhh/SBUHacks/assets/81812754/80a21bf1-7c66-440a-a2ba-3b75a4098a92">
+<img width="1512" alt="Screenshot 2024-02-11 at 7 34 54 AM" src="https://github.com/ritessshhh/SBUHacks/assets/81812754/b1e30833-247a-4c30-b8ce-1bfc4d3cb1cf">
+<img width="1512" alt="Screenshot 2024-02-11 at 7 35 08 AM" src="https://github.com/ritessshhh/SBUHacks/assets/81812754/63fbfaab-7c63-4cb7-9b18-a1f0d6e71833">
+
 ## What it does
 
 HOCUS POTUS is an interactive platform that gamifies the learning process about political policies and candidates, aiming to make young voters more informed and engaged through quizzes, hints, and feedback mechanisms. Users can explore policies, match them to candidates, and submit feedback. 
