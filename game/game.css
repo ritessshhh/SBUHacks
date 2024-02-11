@@ -5,6 +5,19 @@ body {
     background-repeat: no-repeat;
     width: 100vw;
     height: 100vh;
+    position: relative;
+}
+
+#form {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    background-color: white;
+    border: 1px solid blue;
+    padding: 10px 0;
+    border-radius: 30px;
 }
 
 img {
