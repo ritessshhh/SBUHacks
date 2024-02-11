@@ -1,3 +1,13 @@
+const success = sessionStorage.getItem("success");
+const masteryText = document.getElementById("masteryText")
+if (success === null) {
+    masteryText.style.display = "none";
+}
+else {
+    masteryText.innerText = `Congratulations for mastering ${success}`
+}
+
+
 window.addEventListener('load', function () {
     document.getElementById('loadingOverlay').style.display = 'none';
 });
