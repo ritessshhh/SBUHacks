@@ -16,7 +16,7 @@ body {
 
 .Header {
     text-align: center;
-    margin-top: 250px !important;
+    margin-top: 160px !important;
     margin-bottom: -50px;
 }
 
@@ -139,4 +139,9 @@ dotlottie-player {
     margin-bottom: 500px;
     background-color: black;
     color: white;
+}
+
+#masteryText {
+    margin-top: 30px;
+    margin-bottom: -30px;
 }
