@@ -94,26 +94,7 @@
                 </div>
             </div>
         </div>
-        <div class="btn-group dropup">
-            <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
-                    class="bi bi-lightbulb-fill" viewBox="0 0 16 16">
-                    <path
-                        d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13h-5a.5.5 0 0 1-.46-.302l-.761-1.77a2 2 0 0 0-.453-.618A5.98 5.98 0 0 1 2 6m3 8.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1-.5-.5" />
-                </svg>
-                Hint!
-            </button>
-            <ul class="dropdown-menu">
-                <li>
-                    <a id="hint" class="dropdown-item" href="#">
-                        It's trump just choose it dont annoy me. <br>Anyone could have able to
-                        get it.
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <div class="btn-group2 dropup">
+        <div class="btn-group dropup one">
             <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown"
                 aria-expanded="false">
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
@@ -123,19 +104,32 @@
                 </svg>
                 Chat!
             </button>
-            <ul class="dropdown-menu">
+            <ul class="dropdown-menu one">
                 <li>
                     <div class="chat-container" id="chatContainer"></div>
                     <div class="input-container">
                         <input type="text" id="messageInput" placeholder="Type a message...">
                         <button onclick="sendMessage()" id="sendButton">Send</button>
                     </div>
-
-                    <script src="chat.js"></script>
                 </li>
             </ul>
         </div>
+        <div class="btn-group dropup" id="dropdown2">
+            <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <!-- <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                    class="bi bi-lightbulb-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13h-5a.5.5 0 0 1-.46-.302l-.761-1.77a2 2 0 0 0-.453-.618A5.98 5.98 0 0 1 2 6m3 8.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1-.5-.5" />
+                </svg> -->
+                <span id="">Hint!</span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" id="hint" href="#">Menu item</a></li>
+            </ul>
+        </div>
     </div>
+    <script src="chat.js"></script>
     <script src="game.js"></script>
     <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"

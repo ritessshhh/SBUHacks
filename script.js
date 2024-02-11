@@ -1,3 +1,6 @@
+window.addEventListener('load', function () {
+    document.getElementById('loadingOverlay').style.display = 'none';
+});
 const success = sessionStorage.getItem("success");
 const masteryText = document.getElementById("masteryText")
 if (success === null) {
@@ -6,11 +9,6 @@ if (success === null) {
 else {
     masteryText.innerText = `Congratulations for mastering ${success}`
 }
-
-
-window.addEventListener('load', function () {
-    document.getElementById('loadingOverlay').style.display = 'none';
-});
 
 document.addEventListener('DOMContentLoaded', function () {
     // Initialize an empty array to store the texts
