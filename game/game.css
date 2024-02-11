@@ -117,7 +117,8 @@ dotlottie-player {
 }
 
 .btn-group {
-    padding-right: 90%;
+    padding-right: 89%;
+    margin-top: -50px;
 
 }
 
@@ -126,9 +127,16 @@ dotlottie-player {
     padding-bottom: 3px;
     color: white;
     background-color: #0275d8;
+    border-radius: 30px;
 }
 
 .btn-group button svg {
     margin-top: 5px;
     margin-bottom: 5px;
+}
+
+.dropdown-item {
+    max-width: 400px;
+    white-space: normal;
+    word-wrap: break-word;
 }

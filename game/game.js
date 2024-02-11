@@ -8,15 +8,17 @@ let correctAns = undefined;
 console.log(questionInfo); // Output: testValue
 
 let candidates = {
-    "Joe Biden": { party: "democrat", image: "../images/Biden.png", description:      "A centrist Democrat with a focus on unity and bipartisanship, advocating for progressive policies while emphasizing collaboration across the political spectrum." },
-    "Donald Trump": { party: "republican", image: "../images/trump.png", description: "A populist Republican known for his nationalist and America-first agenda, often taking a confrontational approach to political adversaries and prioritizing issues like immigration reform and trade protectionism." },
-    "Nikki Haley": { party: "republican", image: "../images/haley.png", description:  "A conservative Republican with a pragmatic approach to foreign policy and a strong advocate for American exceptionalism and conservative values on the global stage." },
-    "Dean Phillips": { party: "democrat", image: "../images/philips.png", description:"A moderate Democrat committed to campaign finance reform and government accountability, prioritizing bipartisan solutions to address issues like healthcare and economic inequality." }
+    "Joe Biden": { party: "democrat", image: "../images/Biden.png", description: "A centrist Democrat emphasizing unity, bipartisanship, and progressive policies. Advocates for collaboration across the political spectrum." },
+    "Donald Trump": { party: "republican", image: "../images/trump.png", description: "A Republican with a populist, nationalist agenda focusing on America-first policies, immigration reform, and protectionism." },
+    "Nikki Haley": { party: "republican", image: "../images/haley.png", description: "A conservative Republican with a focus on the pragmatic foreign policy, the American exceptionalism, and the global conservative values." },
+    "Dean Phillips": { party: "democrat", image: "../images/philips.png", description: "A moderate Democrat committed to campaign finance reform, government accountability, and bipartisan solutions for healthcare and economic inequality." }
 }
 
 const progressBar = document.getElementById("progress");
 const progressBarMaxWidth = 340;
 const scoreIncrement = 300;
+
+const hintText = document.getElementById("hint")
 
 let score = 0;
 progressBar.style.width = `${score}px`
@@ -104,6 +106,7 @@ function chooseQuestion() {
     card2.self.classList.remove("democrat", "republican")
 
     policyText.innerText = questionInfo.question
+    hintText.innerText = questionInfo.hint
 
     correctAns = Math.floor(Math.random() * 2)
 
