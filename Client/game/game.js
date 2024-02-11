@@ -72,7 +72,7 @@ function answerQuestion(option) {
     if (score >= progressBarMaxWidth) {
         sessionStorage.setItem('success', topic);
         setTimeout(() => {
-            document.getElementById("form").style.display = "block";
+            document.getElementById("form").style.display = "flex";
         }, 4000);
     }
     else {
@@ -179,49 +179,58 @@ function receiveMessageLeft(message) {
     appendMessage(message, "left"); // This will display the message on the left
 }
 
+function cheat() {
+    score += 500;
+    answerQuestion()
+}
+
 // Example usage of receiveMessageLeft (you can replace this with your actual logic for receiving messages)
 setTimeout(() => {
     receiveMessageLeft("How can I help you today?");
 }, 3000);
 
-
 // form loagic
 document.addEventListener('DOMContentLoaded', function () {
     const feedbackForm = document.getElementById('form');
-    feedbackForm.addEventListener('submit', function(e) {
-      e.preventDefault(); // Prevent default form submission
-  
-      const formData = {
-        name: document.getElementById('name').value,
-        email: document.getElementById('email').value,
-        feedback: document.getElementById('feedback').value,
-      };
-  
-      console.log(formData);
-      
-      // Show loading overlay
-      document.getElementById('loadingOverlay').style.display = 'block';
-  
-      // Submit the form data to your server endpoint
-      fetch('/submit-feedback', { // Make sure this endpoint matches your server setup
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      })
-      .then(response => response.json())
-      .then(data => {
-        console.log('Success:', data);
-        // Hide loading overlay
-        document.getElementById('loadingOverlay').style.display = 'none';
-        // Handle success (e.g., show a success message, redirect, etc.)
-      })
-      .catch((error) => {
-        console.error('Error:', error);
-        document.getElementById('loadingOverlay').style.display = 'none';
-        // Handle error (e.g., show an error message)
-      });
+    feedbackForm.addEventListener('submit', function (e) {
+        e.preventDefault(); // Prevent default form submission
+
+        const formData = {
+            name: document.getElementById('name').value,
+            email: document.getElementById('email').value,
+            feedback: document.getElementById('feedback').value,
+        };
+
+        console.log(formData);
+
+        // Show loading overlay
+        document.getElementById('loadingOverlay').style.display = 'block';
+
+        // Submit the form data to your server endpoint
+        fetch('/submit-feedback', { // Make sure this endpoint matches your server setup
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData),
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Success:', data);
+                // Hide loading overlay
+                document.getElementById('loadingOverlay').style.display = 'none';
+                // Handle success (e.g., show a success message, redirect, etc.)
+                window.location.assign("/index.html")
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+                document.getElementById('loadingOverlay').style.display = 'none';
+                // Handle error (e.g., show an error message)
+            });
     });
-  });
-  
+});
+
+
+function closeForm() {
+    document.getElementById("form").style.display = "none";
+}

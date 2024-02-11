@@ -8,6 +8,9 @@ if (success === null) {
 }
 else {
     masteryText.innerText = `Congratulations for mastering ${success}`
+    setTimeout(() => {
+        masteryText.style.opacity = "0";
+    }, 2000);
 }
 
 document.addEventListener('DOMContentLoaded', function () {
