@@ -1,9 +1,11 @@
 body {
-    background-image: url(../images/question.svg);
+    background-image: url("../images/Homepage (3).svg");
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     width: 100vw;
     height: 100vh;
+    color: #1D2764;
 }
 
 .animation {
@@ -14,10 +16,6 @@ body {
 .Header {
     text-align: center;
     margin-bottom: 10px;
-}
-
-p {
-    margin: auto;
 }
 
 .form-select {
@@ -52,7 +50,7 @@ a {
     grid-template-columns: repeat(3, 100%);
     overflow: hidden;
     scroll-behavior: smooth;
-    margin-top: 500px;
+    margin-top: 700px;
     display: flex;
     flex-direction: column;
     margin-bottom: 200px;
@@ -131,4 +129,14 @@ dotlottie-player {
 
 .item:hover {
     border: 5px solid #ffdd00;
+    cursor: pointer;
+}
+
+.btn.btn-dark {
+    background-color: #1D2764;
+}
+
+.btn {
+    margin-top: 400px !important;
+    margin-bottom: 30px !important;
 }

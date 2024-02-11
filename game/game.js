@@ -1,3 +1,6 @@
+window.addEventListener('load', function () {
+    document.getElementById('loadingOverlay').style.display = 'none';
+});
 // Retrieve the value from sessionStorage
 const topic = sessionStorage.getItem('topic');
 let questionInfo = JSON.parse(sessionStorage.getItem('questionInfo'));
@@ -50,19 +53,17 @@ function answerQuestion(option) {
 
         setTimeout(() => {
             correctCard.self.removeChild(newElement);
-        }, 2000);
+        }, 3000);
     }
     else {
         console.log("Incorrect!");
         newElement.setAttribute('src', 'https://lottie.host/16cf6411-69cf-487e-84b9-56e7546e423a/83x9J6NMxd.json');
         incorrectCard.self.appendChild(newElement)
         newElement.setAttribute('speed', '0.8');
-
         setTimeout(() => {
             incorrectCard.self.removeChild(newElement);
         }, 2000);
     }
-
     fetch('http://127.0.0.1:8000/start', {
         method: 'POST',
         body: topic,
@@ -74,11 +75,13 @@ function answerQuestion(option) {
         }
     }).then(data => {
         // Set a value in sessionStorage
+        document.getElementById('loadingOverlay').style.display = 'none';
         console.log(data);
         questionInfo = data;
 
         setTimeout(chooseQuestion, 3000);
     }).catch(error => {
+        document.getElementById('loadingOverlay').style.display = 'none';
         console.error('Error:', error);
     });
 }
