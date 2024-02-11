@@ -9,7 +9,7 @@ app = Flask(__name__)
 CORS(app)
 
 
-api_key = "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"
+api_key = "API-KEY"
 headers = {
     "Authorization": f"Bearer {api_key}",
     "Content-Type": "application/json",
