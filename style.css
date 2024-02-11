@@ -10,18 +10,18 @@
 
 #video {
     width: 100vw;
-    height: 230vh;
+    height: 210vh;
     object-fit: cover;
     position: absolute;
     left: 0;
     right: 0;
     top: 20px;
     bottom: 0;
-    z-index:-100;
+    z-index: -100;
 }
 
 #learning-btn {
-    margin-top: 10px;
+    margin-top: 220px;
 }
 
 .animation {
@@ -45,8 +45,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 100px;
-    
+
 }
 
 
@@ -66,10 +65,9 @@ a {
     grid-template-columns: repeat(3, 100%);
     overflow: hidden;
     scroll-behavior: smooth;
-    margin-top: 210px;
+    margin-top: 500px;
     display: flex;
     flex-direction: column;
-    margin-bottom: 200px;
     color: black;
 }
 
@@ -135,7 +133,7 @@ h4 {
 }
 
 .item {
-    color:#1b2563;
+    color: #1b2563;
     background-color: #ffffff;
     border-radius: 15px;
     transition: all 1s;
@@ -155,13 +153,13 @@ dotlottie-player {
 .item:hover {
     border: 3px solid #1b2563;
     cursor: pointer;
-    background-color:#e5ebff;
+    background-color: #e5ebff;
 }
 
 .btn {
     margin-bottom: 0px;
     background-color: white;
-    
+
 }
 
 .btn:hover {
